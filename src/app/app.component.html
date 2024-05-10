@@ -1,0 +1,21 @@
+
+<nb-layout>
+  <nb-layout-header fixed>
+      <button nbButton status="primary" (click)="toggleSidebar()">
+          <nb-icon icon="menu-outline"></nb-icon>
+        </button>
+     &nbsp; &nbsp;   My Header
+    
+     
+    </nb-layout-header>
+  <nb-sidebar>
+    <!-- Sidebar content here -->
+    <nb-menu [items]="items"></nb-menu>
+  
+  </nb-sidebar>
+  <nb-layout-column>
+    <!-- Page Content -->
+    
+    <router-outlet></router-outlet>
+  </nb-layout-column>
+</nb-layout>
