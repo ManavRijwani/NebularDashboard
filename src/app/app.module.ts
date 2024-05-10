@@ -4,7 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { NbThemeModule, NbLayoutModule, NbSidebarModule,NbMenuModule, NbButtonModule  } from '@nebular/theme';
+import { NbThemeModule, NbLayoutModule, NbSidebarModule,NbMenuModule, NbButtonModule,NbContextMenuModule,NbActionsModule, NbToastrModule,  } from '@nebular/theme';
 
 import { HomeComponent } from './home/home.component';
 import { NbSidebarService } from '@nebular/theme';
@@ -12,6 +12,8 @@ import { NbIconModule } from '@nebular/theme';
 import { NbEvaIconsModule } from '@nebular/eva-icons';
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
+import { ToastserviceComponent } from './toastservice/toastservice.component';
+
 
 
 
@@ -20,7 +22,8 @@ import { ContactComponent } from './contact/contact.component';
     AppComponent,
     HomeComponent,
     AboutComponent,
-    ContactComponent
+    ContactComponent,
+    ToastserviceComponent
   ],
   imports: [
     BrowserModule,
@@ -33,7 +36,11 @@ import { ContactComponent } from './contact/contact.component';
     NbMenuModule.forRoot(),
     NbButtonModule,
     NbIconModule,
-    NbEvaIconsModule
+    NbEvaIconsModule,
+    NbActionsModule,
+    NbContextMenuModule,
+    NbToastrModule.forRoot(),
+
   ],
   providers: [NbSidebarService],
   bootstrap: [AppComponent]

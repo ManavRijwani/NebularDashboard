@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NbSidebarService, NbMenuItem } from '@nebular/theme';
+import { NbSidebarService, NbMenuItem, NbPosition } from '@nebular/theme';
 
 
 @Component({
@@ -50,4 +50,10 @@ export class AppComponent {
     this.sidebarService.toggle(true);
   }
   
+  item = [
+    {
+      title: 'Logout',
+    },
+  ];
+  contextMenuPlacement = NbPosition.BOTTOM;
 }

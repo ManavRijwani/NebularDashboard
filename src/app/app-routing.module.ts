@@ -4,9 +4,11 @@ import { NbSidebarComponent } from '@nebular/theme';
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
+import { ToastserviceComponent } from './toastservice/toastservice.component';
 
 const routes: Routes = [
 
+  { path: '', loadChildren: () => import('./profile/profile.module').then(m => m.ProfileModule) },
   {
     path: 'home',
     component: HomeComponent
@@ -20,6 +22,11 @@ const routes: Routes = [
   {
     path: 'about',
     component: AboutComponent
+  },
+   
+  {
+    path: 'toastservice',
+    component: ToastserviceComponent
   },
 
 

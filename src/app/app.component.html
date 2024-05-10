@@ -6,7 +6,10 @@
         </button>
      &nbsp; &nbsp;   My Header
     
-     
+     <nb-actions class="left">
+      <nb-action class="profile" [nbContextMenu]="item" [nbContextMenuPlacement]="contextMenuPlacement">Profile</nb-action>
+      <nb-action>Settings</nb-action>
+    </nb-actions>
     </nb-layout-header>
   <nb-sidebar>
     <!-- Sidebar content here -->
@@ -18,4 +21,8 @@
     
     <router-outlet></router-outlet>
   </nb-layout-column>
+
+  
+  <nb-layout-footer fixed>
+  </nb-layout-footer>
 </nb-layout>
